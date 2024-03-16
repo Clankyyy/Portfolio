@@ -4,11 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MK</title>
 </head>
 
 <body>
-    <h1> Привет! </h1>
+    <header>
+        <div id="logo">HTML</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a>
+                <li><a href="/link">Page</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article class="bio">
+            <p>Some my bio</p>
+        </article>
+
+        {% for p in projects %}
+        <article class="project">
+            <h2>{{ p.title }}</h2>
+            <p>{{ p.content }}</p>
+        </article>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>&copy; HTML CheatSheet</p>
+        <address>
+            Contact <a href="#">me</a>
+        </address>
+    </footer>
+
 </body>
 
 </html>
