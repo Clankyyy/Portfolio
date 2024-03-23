@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #202020;
+    color: white;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    ;
+}
+
+ul,
+a {
+    color: #D6D6D6;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3%;
+}
+
+div#logo {
+    cursor: pointer;
+}
+
+.logo {
+    color: #FFEE32;
+    font-size: 1.2em;
+}
+
+.navbar-part {
+    font-size: 1.2em;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.4s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #FFD100;
+}
+
+.fullname {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30vw;
+    align-items: center;
+}
+
+.name {
+    padding-right: 300px;
+    transform: translate(24%, 0%);
+}
+
+.name-text {
+    font-weight: 600;
+    letter-spacing: -6.5px;
+    font-size: 13vw;
+}
+
+.surname {
+    padding-top: 0%;
+    transform: translate(50%, -18%);
+}
+
+.surname-text {
+    font-weight: 600;
+    letter-spacing: -6.5px;
+    font-size: 13vw;
+}
+
+.notation {
+    margin-top: 12px;
+    display: grid;
+    place-items: end;
+    align-content: center;
+}
+
+.notation-text {
+    transform: translateX(-20%);
+}
+
+.project-title {
+    grid-column: 2;
+}
+
+.project-content {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+article.project {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0em 1em;
+}
+
+.img-thumb-paragraph {
+    grid-row: 1 / 3;
+    grid-column: 1 / 1;
+    justify-self: start;
+    align-self: center;
+}
+
+.img-thumb {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
