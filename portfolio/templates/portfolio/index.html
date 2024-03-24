@@ -12,18 +12,17 @@
 
 <body>
     <header>
-        <div id="logo">
-            <p class="logo">MK</p>
-        </div>
-        <nav>
-            <ul class="nav_links">
-                <li><a class="navbar-part" href="#">КОНТАКТЫ</a>
-                <li><a class="navbar-part" href="{% url 'home'%}">ПРОЕКТЫ</a>
-            </ul>
-        </nav>
-    </header>
-
-    <main role="main">
+        <section class="navbar">
+            <div id="logo">
+                <p class="logo">MK</p>
+            </div>
+            <nav>
+                <ul class="nav_links">
+                    <li><a class="navbar-part" href="#">КОНТАКТЫ</a>
+                    <li><a class="navbar-part" href="{% url 'home'%}">ПРОЕКТЫ</a>
+                </ul>
+            </nav>
+        </section>
         <section class="fullname">
             <div class="name">
                 <p class="name-text">МАРК</p>
@@ -32,12 +31,14 @@
                 <p class="surname-text">КУЗНЕЦОВ</p>
             </div>
         </section>
-
         <section class="notation">
             <p class="notation-text">
                 Software developer
             </p>
         </section>
+    </header>
+
+    <main role="main">
 
         <section class="bio">
             <p>Some my bio</p>
@@ -52,13 +53,38 @@
         {% endfor %}
     </main>
 
+    <hr>
     <footer>
-        <p>&copy; HTML CheatSheet</p>
-        <address>
-            Contact <a href="#">me</a>
-        </address>
-    </footer>
+        <footer class="footer-container">
+            <article class="copyrights">
+                <p>&copy; HTML CheatSheet</p>
+                <address>
+                    Contact <a href="#">me</a>
+                </address>
+            </article>
+            <article class="navigation">
+                <nav>
+                    <p>Страницы</p>
+                    <ul class="footer-nav">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Контакты</a>
+                        <li><a href="{% url 'home'%}">Проекты</a>
+                    </ul>
+                </nav>
+            </article>
+            <article class="socials">
+                <nav>
+                    <p>Ссылки</p>
+                    <ul class="footer-nav">
+                        <li><a href="#">Telegram</a></li>
+                        <li><a href="#">Mail</a>
+                        <li><a href="#">Github</a>
+                    </ul>
+                </nav>
 
+            </article>
+        </footer>
+    </footer>
 </body>
 
 </html>
