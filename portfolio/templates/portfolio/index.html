@@ -5,9 +5,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" href="{% static 'portfolio/css/styles.css' %}" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MK</title>
+
+    <link type="text/css" href="{% static 'portfolio/css/styles.css' %}" rel="stylesheet" />
+    <script defer src="{% static 'portfolio/js/app.js' %}"></script>
 </head>
 
 <body>
@@ -56,12 +58,10 @@
     <hr>
     <footer>
         <footer class="footer-container">
-            <article class="copyrights">
-                <p>&copy; HTML CheatSheet</p>
-                <address>
-                    Contact <a href="#">me</a>
-                </address>
-            </article>
+            <section class="copyrights">
+                <img src="{% static 'portfolio/img/mini-pic.jpg' %}" class="mini-pic" alt="nofile">
+                <figcaption class="love">Made with &#9829;</figcaption>
+            </section>
             <article class="navigation">
                 <nav>
                     <p>Страницы</p>
@@ -76,9 +76,9 @@
                 <nav>
                     <p>Ссылки</p>
                     <ul class="footer-nav">
-                        <li><a href="#">Telegram</a></li>
                         <li><a href="#">Mail</a>
                         <li><a href="#">Github</a>
+                        <li><a href="#">Telegram</a></li>
                     </ul>
                 </nav>
 

@@ -178,12 +178,28 @@ hr {
 }
 
 .copyrights {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
 }
 
 .copyrights * {
     background-color: #151515;
+}
+
+.mini-pic {
+    align-self: flex-start;
+    height: 72px;
+    width: 72px;
+    border-radius: 12px;
+}
+
+
+.love {
+    font-size: 0.62em;
+    opacity: 0.6;
 }
 
 .navigation {
