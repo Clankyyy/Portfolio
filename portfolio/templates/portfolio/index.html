@@ -48,9 +48,10 @@
 
         {% for p in projects %}
         <article class="project">
-            <section class="img-thumb-paragraph"><img class="img-thumb" src="{{ p.photo.url }}" alt="thb"></section>
-            <h2 class="project-title">{{ p.title }}</h2>
-            <p class="project-content">{{ p.content }}</p>
+            <section class="img-thumb-paragraph"><img class="img-thumb hidden" src="{{ p.photo.url }}" alt="thb">
+            </section>
+            <h2 class="project-title hidden">{{ p.title }}</h2>
+            <p class="project-content hidden">{{ p.content }}</p>
         </article>
         {% endfor %}
     </main>
@@ -66,9 +67,9 @@
                 <nav>
                     <p>Страницы</p>
                     <ul class="footer-nav">
-                        <li><a href="#">Главная</a></li>
                         <li><a href="#">Контакты</a>
                         <li><a href="{% url 'home'%}">Проекты</a>
+                        <li><a href="#">Главная</a></li>
                     </ul>
                 </nav>
             </article>
@@ -76,9 +77,9 @@
                 <nav>
                     <p>Ссылки</p>
                     <ul class="footer-nav">
-                        <li><a href="#">Mail</a>
-                        <li><a href="#">Github</a>
                         <li><a href="#">Telegram</a></li>
+                        <li><a href="#">Github</a>
+                        <li><a href="#">Mail</a>
                     </ul>
                 </nav>
 
