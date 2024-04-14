@@ -17,8 +17,8 @@ a {
     text-decoration: none;
 }
 
-header {
-    min-height: 100vh;
+.fio {
+    min-height: 93vh;
 }
 
 .navbar {
@@ -136,7 +136,7 @@ article.project {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 1s;
+    transition: all 0.65s;
 }
 
 .show {

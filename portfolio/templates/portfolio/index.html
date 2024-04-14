@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-{% load static %}
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MK</title>
-
-    <link type="text/css" href="{% static 'portfolio/css/styles.css' %}" rel="stylesheet" />
-    <script defer src="{% static 'portfolio/js/app.js' %}"></script>
-
-</head>
-
-<body>
-    <header>
-        <section class="navbar">
-            <div id="logo">
-                <p class="logo">MK</p>
-            </div>
-            <nav>
-                <ul class="nav_links">
-                    <li><a class="navbar-part" href="#">КОНТАКТЫ</a>
-                    <li><a class="navbar-part" href="{% url 'home'%}">ПРОЕКТЫ</a>
-                </ul>
-            </nav>
-        </section>
+{% extends 'portfolio/base.html' %}
+{% block content%}
+<main role="main">
+    <article class="fio">
         <section class="fullname">
             <div class="name">
                 <p class="name-text">МАРК</p>
@@ -39,54 +15,19 @@
                 Software developer
             </p>
         </section>
-    </header>
+    </article>
 
-    <main role="main">
+    <section class="bio">
+        <p>Some my bi</p>
+    </section>
 
-        <section class="bio">
-            <p>Some my bio</p>
+    {% for p in projects %}
+    <article class="project">
+        <section class="img-thumb-paragraph"><img class="img-thumb hidden" src="{{ p.photo.url }}" alt="thb">
         </section>
-
-        {% for p in projects %}
-        <article class="project">
-            <section class="img-thumb-paragraph"><img class="img-thumb hidden" src="{{ p.photo.url }}" alt="thb">
-            </section>
-            <h2 class="project-title hidden">{{ p.title }}</h2>
-            <p class="project-content hidden">{{ p.content }}</p>
-        </article>
-        {% endfor %}
-    </main>
-
-    <hr>
-    <footer>
-        <footer class="footer-container">
-            <section class="copyrights">
-                <img src="{% static 'portfolio/img/mini-pic.jpg' %}" class="mini-pic" alt="nofile">
-                <figcaption class="love">Made with &#9829;</figcaption>
-            </section>
-            <article class="navigation">
-                <nav>
-                    <p>Страницы</p>
-                    <ul class="footer-nav">
-                        <li><a href="#">Контакты</a>
-                        <li><a href="{% url 'home'%}">Проекты</a>
-                        <li><a href="#">Главная</a></li>
-                    </ul>
-                </nav>
-            </article>
-            <article class="socials">
-                <nav>
-                    <p>Ссылки</p>
-                    <ul class="footer-nav">
-                        <li><a href="#">Telegram</a></li>
-                        <li><a href="#">Github</a>
-                        <li><a href="#">Mail</a>
-                    </ul>
-                </nav>
-
-            </article>
-        </footer>
-    </footer>
-</body>
-
-</html>
+        <h2 class="project-title hidden">{{ p.title }}</h2>
+        <p class="project-content hidden">{{ p.content }}</p>
+    </article>
+    {% endfor %}
+</main>
+{% endblock content %}
