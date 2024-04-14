@@ -22,8 +22,8 @@
             </div>
             <nav>
                 <ul class="nav_links">
-                    <li><a class="navbar-part" href="#">КОНТАКТЫ</a>
-                    <li><a class="navbar-part" href="{% url 'home'%}">ПРОЕКТЫ</a>
+                    <li><a class="navbar-part" href="#contact">КОНТАКТЫ</a>
+                    <li><a class="navbar-part" href="{% url 'home'%}#projs">ПРОЕКТЫ</a>
                 </ul>
             </nav>
         </section>
@@ -32,7 +32,7 @@
     {% block content %} {% endblock content %}
 
     <hr>
-    <footer>
+    <footer id="contact">
         <footer class="footer-container">
             <section class="copyrights">
                 <img src="{% static 'portfolio/img/mini-pic.jpg' %}" class="mini-pic" alt="nofile">
@@ -42,9 +42,9 @@
                 <nav>
                     <p>Страницы</p>
                     <ul class="footer-nav">
-                        <li><a href="#">Контакты</a>
-                        <li><a href="{% url 'home'%}">Проекты</a>
-                        <li><a href="#">Главная</a></li>
+                        <li><a href="#contact">Контакты</a>
+                        <li><a href="#projs">Проекты</a>
+                        <li><a href="{% url 'home'%}">Главная</a></li>
                     </ul>
                 </nav>
             </article>
@@ -52,9 +52,9 @@
                 <nav>
                     <p>Ссылки</p>
                     <ul class="footer-nav">
-                        <li><a href="#">Telegram</a></li>
-                        <li><a href="#">Github</a>
-                        <li><a href="#">Mail</a>
+                        <li><a href="https://t.me/morkovvvvvv" target="_blank">Telegram: @morkovvvvvv </a></li>
+                        <li><a href="https://github.com/Clankyyy" target="_blank">Github</a>
+                        <li><a href="mailto:markkuznetsov74@gmail.com" target="_blank">Mail: markkuznetsov74@gmail.com</a>
                     </ul>
                 </nav>
 

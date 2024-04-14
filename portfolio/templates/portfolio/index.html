@@ -21,13 +21,15 @@
         <p>Some my bi</p>
     </section>
 
-    {% for p in projects %}
-    <article class="project">
-        <section class="img-thumb-paragraph"><img class="img-thumb hidden" src="{{ p.photo.url }}" alt="thb">
-        </section>
-        <h2 class="project-title hidden">{{ p.title }}</h2>
-        <p class="project-content hidden">{{ p.content }}</p>
-    </article>
-    {% endfor %}
+    <section id="projs">
+        {% for p in projects %}
+        <article class="project">
+            <section class="img-thumb-paragraph"><img class="img-thumb hidden" src="{{ p.photo.url }}" alt="thb">
+            </section>
+            <h2 class="project-title hidden">{{ p.title }}</h2>
+            <p class="project-content hidden">{{ p.content }}</p>
+        </article>
+        {% endfor %}
+    </section>
 </main>
 {% endblock content %}
